@@ -1,0 +1,40 @@
+.navbar {
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background: linear-gradient(45deg, #FAA419, #FF5638);
+}
+.navbar h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.6rem;
+  line-height: 59px;
+  color: #2e1c00;
+}
+.navbar ul {
+  display: none;
+}
+.navbar ul li {
+  padding-left: 1rem;
+}
+.navbar ul li a {
+  font-size: .9rem;
+  line-height: 59px;
+  color: black;
+}
+.navbar ul li a:hover {
+  color: #FAA419;
+}
+@media (min-width: 600px) {
+  .navbar {
+    padding: 0 4rem;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,64 +1,53 @@
 .header {
   width: 100%;;
-  height: 100vh;
-  background: linear-gradient(180deg, rgb(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(../assets/header-background.jpg);
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+  background: linear-gradient(180deg, rgb(0, 0, 0, 0.7), rgba(0,0,0,0)), url(../assets/header-background.jpg);
   background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-.navbar {
-  padding: 1rem 4rem;
-  display: flex;
-  justify-content: space-between;
-}
-.navbar h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
-}
-.navbar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar ul li {
-  padding-left: 1rem;
-}
-.navbar ul li a {
-  font-size: 0.8rem;
-  color: white;
-}
-.navbar ul li a:hover {
-  color: #FAA419;
-}
-.content {
-  flex-grow: 1;
+  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-.content h3 {
+.header div {
+  text-align: center;
+}
+.header h3 {
   font-family: 'Pacifico', cursive;
-  font-size: 3.5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #FF5638;
 }
-.content p {
-  font-size: 2.5rem;
+.header p {
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 200;
   color: #FAA419;
 }
-.content a {
-  font-size: 1.2rem;
+.header a {
+  font-size: 1rem;
   color: white;
-  background-color: #FF5638;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 25px;
+  background: linear-gradient(45deg, #FAA419, #FF5638);
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
   text-align: center;
+  margin-bottom: 2rem;
 }
-.content a:hover {
-  background-color: #FAA419;
+.header a:hover {
+  color: black;
+  background: linear-gradient(45deg, #BF7D13, #BF402A);
+}
+@media (min-width: 600px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .header h3 {
+    margin-top: 5rem;
+  }
+  .header p {
+    font-size: 2rem;
+  }
 }
