@@ -2,26 +2,27 @@
   width: 100%;;
   height: calc(100vh - 60px);
   margin-top: 60px;
-  background: linear-gradient(180deg, rgb(0, 0, 0, 0.7), rgba(0,0,0,0)), url(../assets/header-background.jpg);
+  padding: 0 1rem;
+  background: linear-gradient(180deg, rgb(0, 0, 0, 0.6), rgba(0,0,0, 0.6)), url(../assets/header-background.jpg);
   background-size: cover;
   background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .header div {
   text-align: center;
 }
 .header h3 {
   font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  margin-top: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
   color: #FF5638;
 }
 .header p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
   font-weight: 200;
   color: #FAA419;
 }
@@ -34,7 +35,6 @@
   line-height: 40px;
   border-radius: 20px;
   text-align: center;
-  margin-bottom: 2rem;
 }
 .header a:hover {
   color: black;
@@ -42,12 +42,18 @@
 }
 @media (min-width: 600px) {
   .header {
+    background: linear-gradient(180deg, rgb(0, 0, 0, 0.7), rgba(0,0,0,0)), url(../assets/header-background.jpg);
+    background-size: cover;
+    background-position: top;
     justify-content: flex-start;
   }
   .header h3 {
-    margin-top: 5rem;
+    font-size: 3.5rem;
+    margin-top: 10vh;
+    margin-bottom: 0;
   }
   .header p {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
