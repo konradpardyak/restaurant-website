@@ -14,25 +14,29 @@
   line-height: 59px;
   color: #2e1c00;
 }
-.navbar ul {
+.navbarMenuGroup {
+  display: flex;
+}
+.navbarMenu {
   display: none;
 }
-.navbar ul li {
-  padding-left: 1rem;
+.navbarMenu li {
+  padding-right: 1.3rem;
 }
-.navbar ul li a {
-  font-size: .9rem;
-  line-height: 59px;
+.navbarMenu li a {
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 60px;
   color: black;
 }
-.navbar ul li a:hover {
-  color: #FAA419;
+.navbarMenu li a:hover {
+  opacity: .6;
 }
 @media (min-width: 600px) {
   .navbar {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
-  .navbar ul {
+  .navbarMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,16 +1,22 @@
+import BurgerMenu from './BurgerMenu';
+import Cart from './Cart';
 import style from './Navbar.module.css';
 
 const Navbar = () => {
   return(
     <nav className={style.navbar}>
-        <h1>Pizza Toscana</h1>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Contact</a></li>
+      <h1>Pizza Toscana</h1>
+      <div className={style.navbarMenuGroup}>
+        <ul className={style.navbarMenu}>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
-      </nav>
+        <Cart />
+        <BurgerMenu />
+      </div>
+    </nav>
   )
 }
 
