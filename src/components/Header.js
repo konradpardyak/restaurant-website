@@ -1,4 +1,5 @@
 import style from './Header.module.css';
+import BigButton from './shared/BigButton';
 
 const Header = () => {
   return(
@@ -7,7 +8,7 @@ const Header = () => {
         <h3>Italian tradition</h3>
         <p>We deliver the best pizzas in town</p>
       </div>
-      <a href="#">ORDER NOW</a>
+      <BigButton href="#" >ORDER NOW</BigButton>
     </header>
   )
 }
