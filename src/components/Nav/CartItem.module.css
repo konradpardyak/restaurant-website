@@ -1,0 +1,79 @@
+.cartItem {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-position: 45% 50%;
+  border-radius: 50%;
+}
+.group {
+  height: 90px;
+  padding-left: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info {
+  line-height: 25px;
+  color: white;
+}
+.price {
+  opacity: .8;
+}
+.quantity {
+  width: 78px;
+  height: 26px;
+  background:linear-gradient(45deg, #FAA419, #FF5638);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 13px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+.add, .substract {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: .8rem;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.add:hover {
+  /* background-color: rgba(255, 255, 255, .3); */
+  background-color: #ff822f;
+}
+.substract:hover {
+  background-color: #ff962f;
+}
+.add:active {
+  background-color: #ff632f;
+}
+.substract:active {
+  background-color: #ff822f;
+}
+.delete {
+  width: 26px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.delete svg {
+  fill: white;
+  cursor: pointer;
+}
+.delete svg:hover {
+  opacity: .5;
+}
