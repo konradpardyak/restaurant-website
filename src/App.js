@@ -1,14 +1,15 @@
 import './App.css';
+import Theme from "./Theme";
 import Header from './components/Header';
-import Navbar from './components/Navbar';
+import TopBar from './components/TopBar/TopBar';
 
 const App = () => {
   return (
-    <>
-      <Navbar />
+    <Theme>
+      <TopBar />
       <Header />
-    </>
-  );
+    </Theme>
+  )
 }
 
 export default App;
