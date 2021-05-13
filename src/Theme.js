@@ -11,8 +11,7 @@ const theme = {
     hoverLight: "rgba(255,255,255,.1)"
   },
   gradients: {
-    main: "linear-gradient(90deg, #FAA419, #FF5638)",
-    mainDark: "linear-gradient(90deg, #D98E16, #E64D32)"
+    main: "linear-gradient(90deg, #FAA419, #FF5638)"
   }
 }
 
