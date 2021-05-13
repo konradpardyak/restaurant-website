@@ -51,7 +51,7 @@ const Header = () => {
     <StyledHeader>
       <h1>Italian tradition</h1>
       <p>We deliver the best pizzas in town</p>
-      <Button big href="#" >Order Now</Button>
+      <Button href="#" >Order Now</Button>
     </StyledHeader>
   )
 }

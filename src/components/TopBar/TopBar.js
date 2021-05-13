@@ -23,9 +23,9 @@ const StyledTopBar = styled.div`
   }
 `
 const Logo = styled.h1`
-  font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', 'cursive';
   font-size: 1.6rem;
-  line-height: 59px;
+  line-height: 60px;
   color: ${props => props.theme.colors.mainDark};
 `
 const NavGroup = styled.div`
@@ -59,10 +59,10 @@ const TopBar = () => {
       <Logo>Pizza Toscana</Logo>
       <NavGroup>
         <NavBar>
-          <Link href="#">HOME</Link>
-          <Link href="#">ABOUT</Link>
-          <Link href="#">MENU</Link>
-          <Link href="#">CONTACT</Link>
+          <Link href="#">Home</Link>
+          <Link href="#">About</Link>
+          <Link href="#">Menu</Link>
+          <Link href="#">Contact</Link>
         </NavBar>
         <CartButton onToggleChange={handleCartToggleChange} />
         <Cart onToggleChange={handleCartToggleChange} isOpen={cartToggleState} />
