@@ -39,7 +39,6 @@ const Quantity = styled.div`
 `
 const Price = styled.p`
   opacity: .5;
-  font-size: .8rem;
 `
 
 const CartItem = ({ imgUrl, name, price }) => {
