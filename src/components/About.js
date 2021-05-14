@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Button from './styled/Button';
+import Header from './styled/Header';
 
 const StyledAbout = styled.section`
   display: flex;
@@ -49,7 +50,7 @@ const Description = styled.div`
     min-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     text-align: left;
     padding: 0 0 0 1rem;
@@ -57,15 +58,7 @@ const Description = styled.div`
   @media (min-width: 1000px) {
     width: 560px;
     padding: 1rem 1rem 1rem 5rem;
-  }
-  h2 {
-    font-size: 1rem;
-    color: ${props => props.theme.colors.secondary};
-  }
-  h3 {
-    font-size: 2rem;
-    font-family: 'Pacifico', 'cursive';
-    color: ${props => props.theme.colors.primary};
+    justify-content: space-between;
   }
   p {
     padding-bottom: 2rem;
@@ -79,8 +72,10 @@ const About = () => {
   return(
     <StyledAbout>
       <Description>
-        <h2>About Us</h2>
-        <h3>Restaurant</h3>
+        <Header>
+          <h2>About Us</h2>
+          <h3>Restaurant</h3>
+        </Header>
         <p>
           Loremipsum dolor sit amet, consectetur adipiscing elit. Donec non tincidunt est. Proin nulla ante, porta ac porttitor sit amet, sollicitudin venenatis nunc. In ac iaculis arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque tincidunt nisi quis dui ultricies, non tincidunt ipsum venenatis.
         </p>
