@@ -3,6 +3,7 @@ import Theme from './Theme';
 import TopBar from './components/TopBar/TopBar';
 import Header from './components/Header';
 import About from './components/About';
+import FoodMenu from './components/FoodMenu/FoodMenu';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <TopBar />
       <Header />
       <About />
+      <FoodMenu />
     </Theme>
   )
 }
