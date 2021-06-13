@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Button from '../styled/Button';
+import { connect } from 'react-redux';
+import { addToCart } from '../../redux/Shop/shopActions';
 
 const StyledFoodMenuItem = styled.li`
   width: 100%;
@@ -23,7 +25,7 @@ const Image = styled.div`
   margin: auto;
 `
 
-const FoodMenuItem = ({ imgUrl, name, price, desc }) => {
+const FoodMenuItem = ({ id, imgUrl, name, price, desc, addToCart }) => {
 
   const image = require(`../../assets/${imgUrl}`);
 
@@ -33,9 +35,15 @@ const FoodMenuItem = ({ imgUrl, name, price, desc }) => {
         <h4>{name}</h4>
         <p>{desc}</p>
         <h5>{price} EUR</h5>
-        <Button>ADD TO CART</Button>
+        <Button onClick={() => addToCart(id)}>ADD TO CART</Button>
     </StyledFoodMenuItem>
   )
 }
 
-export default FoodMenuItem;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(FoodMenuItem);

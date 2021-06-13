@@ -3,6 +3,8 @@ import IconLink from '../styled/IconLink';
 import DeleteIcon from '../icons/DeleteIcon';
 import AddIcon from '../icons/AddIcon';
 import SubstractIcon from '../icons/SubstractIcon';
+import { connect } from 'react-redux';
+import { adjustItemQty, removeFromCart } from '../../redux/Shop/shopActions';
 
 const StyledCartItem = styled.li`
   width: 100%;
@@ -41,9 +43,23 @@ const Price = styled.p`
   opacity: .5;
 `
 
-const CartItem = ({ imgUrl, name, price }) => {
+const CartItem = ({ id, imgUrl, name, price, qty, adjustItemQty, removeFromCart }) => {
 
   const image = require(`../../assets/${imgUrl}`);
+
+  const remove = () => {
+    removeFromCart(id);
+  }
+
+  const substract = () => {
+    qty === 1
+    ? removeFromCart(id)
+    : adjustItemQty(id, qty - 1);
+  }
+
+  const add = () => {
+    adjustItemQty(id, qty + 1);
+  }
 
   return (
     <StyledCartItem>
@@ -54,16 +70,16 @@ const CartItem = ({ imgUrl, name, price }) => {
             <p>{name}</p>
             <Price>{price} EUR</Price>
           </div>
-          <IconLink color="#fff" light>
+          <IconLink onClick={remove} color="#fff" light>
             <DeleteIcon />
           </IconLink>
         </Top>
         <Quantity>
-            <IconLink color="#fff" light>
+            <IconLink onClick={substract} color="#fff" light>
               <SubstractIcon />
             </IconLink>
-            1
-            <IconLink color="#fff" light>
+            {qty}
+            <IconLink onClick={add} color="#fff" light>
               <AddIcon />
             </IconLink>
           </Quantity>
@@ -72,4 +88,11 @@ const CartItem = ({ imgUrl, name, price }) => {
   )
 }
 
-export default CartItem;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    adjustItemQty: (id, qty) => dispatch(adjustItemQty(id, qty)),
+    removeFromCart: (id) => dispatch(removeFromCart(id))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CartItem);

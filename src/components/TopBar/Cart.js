@@ -3,6 +3,7 @@ import CartItem from './CartItem';
 import Button from '../styled/Button';
 import IconLink from '../styled/IconLink';
 import CloseIcon from '../icons/CloseIcon';
+import { connect } from 'react-redux';
 
 const Content = styled.div`
   position: fixed;
@@ -67,7 +68,7 @@ const Footer = styled.div`
   }
 `
 
-const Cart = ({ isOpen, onToggleChange }) => {
+const Cart = ({ isOpen, onToggleChange, cart }) => {
 
   const handleClick = () => {
     onToggleChange();
@@ -84,12 +85,16 @@ const Cart = ({ isOpen, onToggleChange }) => {
           </IconLink>
         </Header>
         <ItemList>
-          <CartItem imgUrl="001.jpg" name="Margherita" price={19.99} />
+          {cart.map(({id, imgUrl, name, price, desc, qty}) => (
+            <CartItem key={id} id={id} imgUrl={imgUrl} name={name} price={price} desc={desc} qty={qty}/>
+          ))}
         </ItemList>
         <Footer>
           <div>
             <h3>Total</h3>
-            <h3>19.99 EUR</h3>
+            <h3>
+              {(cart.reduce((total, item) => ( item.price * 100 * item.qty + total ), 0) / 100).toFixed(2)} EUR
+            </h3>
           </div>
           <Button href="#">CHECKOUT</Button>
         </Footer>
@@ -98,4 +103,10 @@ const Cart = ({ isOpen, onToggleChange }) => {
   )
 }
 
-export default Cart;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart
+  }
+}
+
+export default connect(mapStateToProps)(Cart);

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Header from '../styled/Header';
 import FoodMenuItem from './FoodMenuItem';
+import { connect } from "react-redux";
 
 const StyledFoodMenu = styled.section`
   background-color: #f4f4f4;
@@ -16,7 +17,7 @@ const FoodMenuList = styled.ul`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `
 
-const FoodMenu = () => {
+const FoodMenu = ({ products }) => {
   return(
     <StyledFoodMenu>
       <Header>
@@ -24,10 +25,18 @@ const FoodMenu = () => {
         <h3>Our Specials</h3>
       </Header>
       <FoodMenuList>
-        <FoodMenuItem imgUrl="001.jpg" name="Margherita" price={19.99} desc="Loremipsum dolor sit amet." />
+        {products.map(({id, imgUrl, name, price, desc}) => (
+          <FoodMenuItem key={id} id={id} imgUrl={imgUrl} name={name} price={price} desc={desc} />
+        ))}
       </FoodMenuList>
     </StyledFoodMenu>
   )
 }
 
-export default FoodMenu;
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products
+  }
+}
+
+export default connect(mapStateToProps)(FoodMenu);
