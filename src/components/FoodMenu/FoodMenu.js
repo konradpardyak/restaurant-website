@@ -19,7 +19,7 @@ const FoodMenuList = styled.ul`
 
 const FoodMenu = ({ products }) => {
   return(
-    <StyledFoodMenu>
+    <StyledFoodMenu id="menu">
       <Header>
         <h2>Food Menu</h2>
         <h3>Our Specials</h3>

@@ -59,10 +59,10 @@ const TopBar = () => {
       <Logo>Pizza Toscana</Logo>
       <NavGroup>
         <NavBar>
-          <Link href="#">Home</Link>
-          <Link href="#">About</Link>
-          <Link href="#">Menu</Link>
-          <Link href="#">Contact</Link>
+          <Link to="home" smooth={true} offset={-60} duration={500}>Home</Link>
+          <Link to="about" smooth={true} offset={-60} duration={500}>About</Link>
+          <Link to="menu" smooth={true} offset={-60} duration={500}>Menu</Link>
+          <Link to="contact" smooth={true} offset={-60} duration={500}>Contact</Link>
         </NavBar>
         <CartButton onToggleChange={handleCartToggleChange} />
         <Cart onToggleChange={handleCartToggleChange} isOpen={cartToggleState} />

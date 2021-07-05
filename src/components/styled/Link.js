@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link as LinkScroll } from "react-scroll";
 
-const Link = styled.a`
+const Link = styled(LinkScroll)`
   font-size: 1rem;
   font-weight: 700;
   color: ${props => props.primary ? props.theme.colors.primary : props.theme.colors.main};

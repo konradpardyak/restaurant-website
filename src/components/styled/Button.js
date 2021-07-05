@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link as LinkScroll } from "react-scroll";
 
-const Button = styled.a`
+const Button = styled(LinkScroll)`
   display: inline-block;
   color: white;
   background: ${props => props.theme.gradients.main};
@@ -10,9 +11,12 @@ const Button = styled.a`
   border-radius: 3rem;
   text-align: center;
   cursor: pointer;
+  user-select: none;
   &:hover {
-    color: ${props => props.theme.colors.main};
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.5);
+    background: ${props => props.theme.colors.primary};
+  }
+  &:active {
+    background: ${props => props.theme.gradients.main};
   }
 `
 

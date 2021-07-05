@@ -70,7 +70,7 @@ const About = () => {
   const restaurantImage = require(`../assets/restaurant-background.jpg`);
 
   return(
-    <StyledAbout>
+    <StyledAbout id="about">
       <Description>
         <Header>
           <h2>About Us</h2>

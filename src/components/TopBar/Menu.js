@@ -46,10 +46,10 @@ const Menu = ({ isOpen, onToggleChange }) => {
   return (
     <>
       <Content isOpen={isOpen}>
-          <MenuLink onClick={handleClick} href="#">HOME</MenuLink>
-          <MenuLink onClick={handleClick} href="#">ABOUT</MenuLink>
-          <MenuLink onClick={handleClick} href="#">MENU</MenuLink>
-          <MenuLink onClick={handleClick} href="#">CONTACT</MenuLink>
+          <MenuLink onClick={handleClick} to="home" smooth={true} offset={-60} duration={500}>HOME</MenuLink>
+          <MenuLink onClick={handleClick} to="about" smooth={true} offset={-60} duration={500}>ABOUT</MenuLink>
+          <MenuLink onClick={handleClick} to="menu" smooth={true} offset={-60} duration={500}>MENU</MenuLink>
+          <MenuLink onClick={handleClick} to="contact" smooth={true} offset={-60} duration={500}>CONTACT</MenuLink>
       </Content>
       <Shadow isOpen={isOpen} onClick={handleClick}></Shadow>
     </>

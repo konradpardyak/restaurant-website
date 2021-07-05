@@ -48,10 +48,10 @@ const StyledHeader = styled.header`
 
 const Header = () => {
   return(
-    <StyledHeader>
+    <StyledHeader id="home">
       <h1>Italian tradition</h1>
       <p>We deliver the best pizzas in town</p>
-      <Button href="#" >ORDER NOW</Button>
+      <Button to="menu" smooth={true} offset={-60} duration={500}>ORDER NOW</Button>
     </StyledHeader>
   )
 }

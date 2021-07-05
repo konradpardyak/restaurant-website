@@ -22,6 +22,9 @@ const IconLink = styled.a`
   &:hover {
     background-color: ${props => props.light ? props.theme.colors.hoverLight : props.theme.colors.hover};
   }
+  &:active {
+    background-color: inherit;
+  }
 `
 
 export default IconLink;
