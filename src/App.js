@@ -4,6 +4,7 @@ import TopBar from './components/TopBar/TopBar';
 import Header from './components/Header';
 import About from './components/About';
 import FoodMenu from './components/FoodMenu/FoodMenu';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <About />
       <FoodMenu />
+      <Contact />
     </Theme>
   )
 }
