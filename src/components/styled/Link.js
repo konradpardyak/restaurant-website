@@ -3,12 +3,12 @@ import { Link as LinkScroll } from "react-scroll";
 
 const Link = styled(LinkScroll)`
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   color: ${props => props.primary ? props.theme.colors.primary : props.theme.colors.main};
   padding: 0 1rem;
   height: 2rem;
   line-height: 2rem;
-  border-radius: .4rem;
+  border-radius: 1rem;
   text-align: center;
   cursor: pointer;
   &:hover {
