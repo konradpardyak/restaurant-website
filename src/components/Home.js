@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from './styled/Button';
+import {ScrollButton} from './styled/Button';
 import headerBackground from '../assets/header-background.jpg';
 
 const StyledHeader = styled.header`
@@ -46,14 +46,14 @@ const StyledHeader = styled.header`
   }
 `
 
-const Header = () => {
+const Home = () => {
   return(
     <StyledHeader id="home">
       <h1>Italian tradition</h1>
       <p>We deliver the best pizzas in town</p>
-      <Button to="menu" smooth={true} offset={-60} duration={500}>ORDER NOW</Button>
+      <ScrollButton to="menu" smooth={true} offset={-60} duration={500}>order now</ScrollButton>
     </StyledHeader>
   )
 }
 
-export default Header;
+export default Home;

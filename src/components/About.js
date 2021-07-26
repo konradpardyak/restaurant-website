@@ -8,9 +8,9 @@ const StyledAbout = styled.section`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  padding: 1rem 0;
   @media (min-width: 600px) {
     min-height: calc(100vh - 60px);
-    padding: 1rem 0;
   }
 `
 const Content = styled.div`
@@ -26,8 +26,8 @@ const Content = styled.div`
   }
 `
 const Image = styled.div`
-  width: 60vw;
-  height: 40vw;
+  width: 75vw;
+  height: 50vw;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -74,7 +74,7 @@ const Quotes = styled.p`
   font-weight: 700;
   line-height: 1.6rem;
   border-left: 5px solid ${props => props.theme.colors.primary};
-  padding-left: 1rem;
+  padding-left: .5rem;
 `
 const Tyopgraphy = styled.p`
   padding-bottom: 2rem;

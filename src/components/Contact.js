@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import Header from './styled/Header';
+import Button from './styled/Button';
 
 const StyledContact = styled.section`
   display: flex;
@@ -24,17 +25,18 @@ const StyledForm = styled.form`
 `
 const inputStyle = css`
   min-width: 0;
-  border: 4px solid ${props => props.theme.colors.secondary};
-  font-size: 1.4rem;
+  border: 3px solid ${props => props.theme.colors.secondary};
+  font-size: 1.6rem;
   line-height: 2.5rem;
   padding: 0 1.4rem;
   border-radius: 1.6rem;
   margin: 1rem;
+  font-family: inherit;
   ::placeholder {
     color: ${props => props.theme.colors.secondary};
   }
   &:focus {
-    border: 4px solid ${props => props.theme.colors.primary};
+    border: 3px solid ${props => props.theme.colors.primary};
     outline: none;
     ::placeholder {
     color: ${props => props.theme.colors.primary};
@@ -48,28 +50,8 @@ const StyledTextarea = styled.textarea`
   ${inputStyle}
   margin: 0 1rem 1rem 1rem;
 `
-const SubmitButton = styled.input`
+const SubmitButton = styled(Button)`
   margin: 1rem;
-  color: white;
-  border: none;
-  background: ${props => props.theme.gradients.main};
-  padding: 0 2.5rem;
-  height: 2.5rem;
-  font-size: 1rem;
-  line-height: 2.5rem;
-  border-radius: 3rem;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  &:hover {
-    background: ${props => props.theme.colors.primary};
-  }
-  &:active {
-    background: ${props => props.theme.gradients.main};
-  }
-  &:focus {
-    outline: 2px solid ${props => props.theme.colors.primary};
-  }
 `
 const Group = styled.div`
   display: flex;
@@ -94,7 +76,7 @@ const Contact = () => {
         <StyledInput type="email" placeholder="Email Addres" />
         ​<StyledTextarea id="textarea" placeholder="Message" rows="4" ></StyledTextarea>
         <div>
-          <SubmitButton type="button" value="SEND" />
+          <SubmitButton type="submit">send</SubmitButton>
         </div>
       </StyledForm>
     </StyledContact>
